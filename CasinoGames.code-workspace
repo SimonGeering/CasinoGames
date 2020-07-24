@@ -15,6 +15,33 @@
 			"**/.hg": true,
 			"**/CVS": true,
 			"**/.DS_Store": true
-		}
+		},
+		"cSpell.language": "en-GB",
+		"cSpell.enableCompoundWords": true,
+		"cSpell.ignorePaths": [
+		"**/.git/objects/**",
+		".vscode",
+		"**/CasinoGames.code-workspace"
+		],
+		"cSpell.words": [
+		"Xunit",
+		"Yacht"
+		]
+	},
+  	"extensions": {
+		"recommendations": [
+		"formulahendry.dotnet-test-explorer",
+		"coenraads.bracket-pair-colorizer",
+		"ms-dotnettools.csharp",
+		"streetsidesoftware.code-spell-checker",
+		"editorconfig.editorconfig",
+		"donjayamanne.githistory",
+		"eamodio.gitlens",
+		"yzhang.markdown-all-in-one",
+		"davidanson.vscode-markdownlint",
+		"shardulm94.trailing-spaces",
+		"pflannery.vscode-versionlens",
+		"visualstudioexptteam.vscodeintellicode"
+		]
 	}
 }
