@@ -1,8 +1,11 @@
 using System;
 
-namespace CasinoGames.Yacht
+namespace CasinoGames.Yacht.Domain
 {
-    public class YachtGameEngine
+    public interface IYachtGameEngine
+    {
+    }
+    public class YachtGameEngine : IYachtGameEngine
     {
     }
 }
