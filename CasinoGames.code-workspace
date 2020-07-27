@@ -1,0 +1,50 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"omnisharp.path": "latest",
+		"files.exclude": {
+			"**/bin/": true,
+      		"**/obj/": true,
+      		"**/.cr/": true,
+			"**/.vs/": true,
+			"**/.git": true,
+			"**/.svn": true,
+			"**/.hg": true,
+			"**/CVS": true,
+			"**/.DS_Store": true
+		},
+		"cSpell.language": "en-GB",
+		"cSpell.enableCompoundWords": true,
+		"cSpell.ignorePaths": [
+		"**/.git/objects/**",
+		".vscode",
+		"**/CasinoGames.code-workspace"
+		],
+		"cSpell.words": [
+		"Xunit",
+		"Yacht"
+		],
+		"dotnet-test-explorer.autoExpandTree": true,
+		"dotnet-test-explorer.testProjectPath": "**/*Test.@(csproj|vbproj|fsproj)"
+	},
+  	"extensions": {
+		"recommendations": [
+		"formulahendry.dotnet-test-explorer",
+		"coenraads.bracket-pair-colorizer",
+		"ms-dotnettools.csharp",
+		"streetsidesoftware.code-spell-checker",
+		"editorconfig.editorconfig",
+		"donjayamanne.githistory",
+		"eamodio.gitlens",
+		"yzhang.markdown-all-in-one",
+		"davidanson.vscode-markdownlint",
+		"shardulm94.trailing-spaces",
+		"pflannery.vscode-versionlens",
+		"visualstudioexptteam.vscodeintellicode"
+		]
+	}
+}
