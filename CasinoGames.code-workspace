@@ -5,6 +5,7 @@
 		}
 	],
 	"settings": {
+		"omnisharp.path": "latest",
 		"files.exclude": {
 			"**/bin/": true,
       		"**/obj/": true,
