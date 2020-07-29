@@ -1,4 +1,4 @@
-name: .NET Core
+name: Pull Request Build
 
 on:
   pull_request:
@@ -20,10 +20,10 @@ jobs:
         dotnet-version: 5.0.100-preview.7.20366.6
     
     - name: Install dependencies
-      run: dotnet restore
+      run: dotnet restore /src/CassinoGames.sln
     
     - name: Build
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build /src/CassinoGames.sln --configuration Release --no-restore
     
     - name: Test
-      run: dotnet test --no-restore --verbosity normal
+      run: dotnet test /src/CassinoGames.sln --no-rebuild --verbosity normal
