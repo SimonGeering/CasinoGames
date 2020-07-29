@@ -1,5 +1,3 @@
-using System;
-
 namespace CasinoGames.Infrastructure
 {
     public interface IRandomNumberGenerator
@@ -11,25 +9,10 @@ namespace CasinoGames.Infrastructure
 
     internal class RandomNumberGenerator : IRandomNumberGenerator
     {
-        private readonly Random _random = new Random();
+        private readonly System.Random random = new System.Random();
 
-#region IRandomNumberGenerator
-
-        public int Next()
-        {
-            return _random.Next();
-        }
-
-        public int Next(int maxValue)
-        {
-            return _random.Next(maxValue);
-        }
-
-        public int Next(int minValue, int maxValue)
-        {
-            return _random.Next(minValue, maxValue);
-        }
-
-#endregion
+        public int Next() => this.random.Next();
+        public int Next(int maxValue) => this.random.Next(maxValue);
+        public int Next(int minValue, int maxValue) => this.random.Next(minValue, maxValue);
     }
 }

@@ -25,41 +25,25 @@ namespace CasinoGames.Core
             {
                 result += this.Roll(diceType);
             }
-
             return result;
         }
 
-        public int Roll(DiceType diceType)
+        public int Roll(DiceType diceType) => diceType switch
         {
-            int result = 0;
+            DiceType.D4 => this.randomNumberGenerator.Next(1, 4),
+            DiceType.D6 => this.randomNumberGenerator.Next(1, 6),
+            DiceType.D10 => this.randomNumberGenerator.Next(1, 10),
+            DiceType.D12 => this.randomNumberGenerator.Next(1, 12),
+            DiceType.D66 => this.GetD66Value(),
+            _ => throw new ArgumentOutOfRangeException(nameof(diceType))
+        };
 
-            switch (diceType)
-            {
-                case DiceType.D4:
-                    result = this.randomNumberGenerator.Next(1, 4);
-                    break;
-
-                case DiceType.D6:
-                    result = this.randomNumberGenerator.Next(1, 6);
-                    break;
-
-                case DiceType.D10:
-                    result = this.randomNumberGenerator.Next(1, 10);
-                    break;
-
-                case DiceType.D12:
-                    result = this.randomNumberGenerator.Next(1, 12);
-                    break;
-
-                case DiceType.D66:
-                    string tens = Convert.ToString(this.Roll(DiceType.D6));
-                    string units = Convert.ToString(this.Roll(DiceType.D6));
-                    string number = string.Concat(tens, units);
-                    result = Int32.Parse(number);
-                    break;
-            }
-
-            return result;
+        private int GetD66Value()
+        {
+            string tens = Convert.ToString(this.Roll(DiceType.D6));
+            string units = Convert.ToString(this.Roll(DiceType.D6));
+            string number = string.Concat(tens, units);
+            return Int32.Parse(number);
         }
     }
 }
