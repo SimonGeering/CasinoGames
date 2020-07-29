@@ -29,7 +29,18 @@
 		"Yacht"
 		],
 		"dotnet-test-explorer.autoExpandTree": true,
-		"dotnet-test-explorer.testProjectPath": "**/*Test.@(csproj|vbproj|fsproj)"
+		"dotnet-test-explorer.testProjectPath": "**/*Test.@(csproj|vbproj|fsproj)",
+		"terminal.integrated.shell.linux": "/opt/microsoft/powershell/6/pwsh",
+		"terminal.integrated.shell.windows": "C:\\Program Files\\PowerShell\\6\\pwsh.exe",
+		"editor.fontFamily": "'Consolas','monospace'",
+		"editor.fontSize": 14,
+		"editor.fontLigatures": true,
+		"editor.detectIndentation": false,
+		"git.enableSmartCommit": true,
+		"team.showWelcomeMessage": false,
+		"workbench.colorCustomizations": {
+			"gitlens.trailingLineForegroundColor": "#bbbaba"
+		},
 	},
   	"extensions": {
 		"recommendations": [
