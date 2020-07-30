@@ -26,4 +26,4 @@ jobs:
       run: dotnet build ./src/CassinoGames.sln --configuration Release --no-restore
     
     - name: Test
-      run: dotnet test ./src/CassinoGames.Test/CassinoGames.Test.csproj --configuration Release --no-build --verbosity normal
+      run: dotnet test ./src/CassinoGames.sln --configuration Release --no-build --verbosity normal
