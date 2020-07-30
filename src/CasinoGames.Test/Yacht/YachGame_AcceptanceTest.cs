@@ -17,7 +17,7 @@ namespace CasinoGames.Test.Yacht
         Others where the score depends on the value of the dice.
 
             - Full House:
-              Three of one number and two of another - Sum of all dice.
+            Three of one number and two of another - Sum of all dice.
 
             - Four-Of-A-Kind
               At least four dice showing the same face - Sum of those four dice.

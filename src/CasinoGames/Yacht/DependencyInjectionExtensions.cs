@@ -2,7 +2,7 @@ using CasinoGames.Yacht.Domain;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
-    public static class DependencyInjectionExtensions
+    public static partial class DependencyInjectionExtensions
     {
         public static void AddYacht(this IServiceCollection services)
         {
