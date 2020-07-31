@@ -68,6 +68,28 @@ namespace CasinoGames.Test.Yacht
     public class YachtGameShould
     {
         [Fact]
+        public void BeComplete_WhenAllRoundsAreComplete()
+        {
+            // Arrange
+            var services = new ServiceCollection();
+            services.AddYacht();
+
+            var gameEngine = services.BuildServiceProvider().GetRequiredService<IYachtGameEngine>();
+            var game = gameEngine.Start();
+            var startingRoundCount = game.Rounds.Count();
+
+            // Act
+            for (int roundsCompleted = 1; roundsCompleted < startingRoundCount; roundsCompleted++)
+            {
+                game = gameEngine.CompleteCurrentRound(game);
+            }
+
+            // Assert
+            game.IsCompleted.Should().BeTrue();
+            game.Rounds.Should().OnlyContain(x => x.IsCompleted == true);
+        }
+
+        [Fact]
         public void HaveAScoreOfZero_WhenTheGameStarts()
         {
             // Arrange

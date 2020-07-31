@@ -6,6 +6,7 @@ namespace CasinoGames.Yacht.Domain
     public interface IYachtGameEngine
     {
         Game Start();
+        Game CompleteCurrentRound(Game game);
     }
     internal class YachtGameEngine : IYachtGameEngine
     {
@@ -20,7 +21,12 @@ namespace CasinoGames.Yacht.Domain
             {
                 rounds.Add(new Round(rounds.Count + 1));
             };
-            return new Game(score: InitialScore, rounds);
+            return new Game(score: InitialScore, isCompleted: false, rounds);
+        }
+
+        public Game CompleteCurrentRound(Game game)
+        {
+            return game;
         }
     }
 }
