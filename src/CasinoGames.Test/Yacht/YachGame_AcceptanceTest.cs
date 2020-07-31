@@ -75,10 +75,10 @@ namespace CasinoGames.Test.Yacht
             services.AddYacht();
 
             // Act
-            var result = services.BuildServiceProvider().GetRequiredService<IYachtGameEngine>().Start();
+            var game = services.BuildServiceProvider().GetRequiredService<IYachtGameEngine>().Start();
 
             // Assert
-            result.Score.Should().Be(0);
+            game.Score.Should().Be(0);
         }
 
         [Fact]
@@ -89,11 +89,11 @@ namespace CasinoGames.Test.Yacht
             services.AddYacht();
 
             // Act
-            var result = services.BuildServiceProvider().GetRequiredService<IYachtGameEngine>().Start();
+            var game = services.BuildServiceProvider().GetRequiredService<IYachtGameEngine>().Start();
 
             // Assert
-            result.Rounds.Should().HaveCount(12);
-            result.Rounds.Should().OnlyContain(x => x.IsCompleted == false);
+            game.Rounds.Should().HaveCount(12);
+            game.Rounds.Should().OnlyContain(x => x.IsCompleted == false);
         }
     }
 }
