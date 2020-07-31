@@ -4,13 +4,13 @@ namespace CasinoGames.Yacht.Domain
 {
     public class Game
     {
-        public int Score { get; private set; }
-        public IEnumerable<Round> RoundsRemaining { get; private set; }
-
-        public Game(int score, IEnumerable<Round> roundsRemaining)
+        public Game(int score, IEnumerable<Round> rounds)
         {
             this.Score = score;
-            this.RoundsRemaining = roundsRemaining;
+            this.Rounds = rounds;
         }
+
+        public int Score { get; private set; }
+        public IEnumerable<Round> Rounds { get; private set; }
     }
 }
