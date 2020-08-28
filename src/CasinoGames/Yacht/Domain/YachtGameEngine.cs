@@ -16,16 +16,27 @@ namespace CasinoGames.Yacht.Domain
         public Game Start()
         {
             // Don't know anything more than that there are 12 rounds at the start yet ...
-            var rounds = new List<Round>();
+            SortedList<int, Round> rounds = new SortedList<int, Round>();
             while(rounds.Count < TotalRounds)
             {
-                rounds.Add(new Round(rounds.Count + 1));
+                var nextSequenceNumber = rounds.Count + 1;
+                rounds.Add(nextSequenceNumber,  new Round { SequenceNumber = nextSequenceNumber });
             };
-            return new Game(score: InitialScore, isCompleted: false, rounds);
+
+            return new Game
+            {
+                Score = InitialScore,
+                IsCompleted = false,
+                Rounds = rounds
+            };
         }
 
         public Game CompleteCurrentRound(Game game)
         {
+
+            // game.Rounds.OrderBy(x => x.SequenceNumber).ToList();
+            //             .First(x => x.IsCompleted == false).IsCompleted == true;
+
             return game;
         }
     }
