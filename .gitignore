@@ -348,3 +348,7 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+
+# CodeRush bits
+src/.cr/personal/Unit Testing/Test Runner UI.xml
+src/.cr/personal/FavoritesList/List.xml
