@@ -1,6 +1,8 @@
 namespace CasinoGames.Yacht.Domain
 {
-    public class Round
+    public record Round
     {
+        public int SequenceNumber { get; init; }
+        public bool IsCompleted { get; init; }
     }
 }
