@@ -1,12 +1,9 @@
 using CasinoGames.Infrastructure;
 
-namespace Microsoft.Extensions.DependencyInjection
+namespace Microsoft.Extensions.DependencyInjection;
+
+public static partial class DependencyInjectionExtensions
 {
-    public static partial class DependencyInjectionExtensions
-    {
-        public static void AddInfrastructure(this IServiceCollection services)
-        {
-            services.AddSingleton<IRandomNumberGenerator, RandomNumberGenerator>();
-        }
-    }
+    public static void AddInfrastructure(this IServiceCollection services)
+        => services.AddSingleton<IRandomNumberGenerator, RandomNumberGenerator>();
 }

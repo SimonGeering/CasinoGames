@@ -1,8 +1,5 @@
-using System;
+namespace CasinoGames.Yacht.UI;
 
-namespace CasinoGames.Yacht.UI
+public class YachtGameViewModel
 {
-    public class YachtGameViewModel
-    {
-    }
 }

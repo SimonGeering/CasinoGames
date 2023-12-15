@@ -1,11 +1,10 @@
-namespace CasinoGames.Core
+namespace CasinoGames.Core;
+
+public enum DiceType
 {
-    public enum DiceType
-    {
-        D4,
-        D6,
-        D10,
-        D12,
-        D66
-    }
+    D4,
+    D6,
+    D10,
+    D12,
+    D66
 }

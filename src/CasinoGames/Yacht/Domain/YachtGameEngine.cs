@@ -1,6 +1,3 @@
-using System.Collections.Generic;
-using System.Linq;
-
 namespace CasinoGames.Yacht.Domain
 {
     public interface IYachtGameEngine

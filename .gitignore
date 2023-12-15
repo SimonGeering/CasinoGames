@@ -255,6 +255,7 @@ ServiceFabricBackup/
 *.mdf
 *.ldf
 *.ndf
+*.bak
 
 # Business Intelligence projects
 *.rdl.data
@@ -350,5 +351,16 @@ MigrationBackup/
 .ionide/
 
 # CodeRush bits
-src/.cr/personal/Unit Testing/Test Runner UI.xml
-src/.cr/personal/FavoritesList/List.xml
+/src/.cr/personal/Unit Testing/Test Runner UI.xml
+
+# Visual Studio XML Doc Comments
+**/*.docs.xml
+
+# Code Coverage
+**/lcov.info
+/src/.cr/personal
+/src/global.json
+/ux
+
+# Environment files 
+*.env
